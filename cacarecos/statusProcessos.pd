@@ -1,0 +1,65 @@
+#N canvas 0 0 450 300 10;
+#X floatatom 62 69 5 0 0 0 - - -;
+#X floatatom 189 70 5 0 0 0 - - -;
+#X obj 62 24 r randomProcessos;
+#X obj 189 25 r statusProcessos;
+#X obj 226 380 s on1;
+#X obj 42 379 s off1;
+#X obj 277 381 s on2;
+#X obj 98 379 s off2;
+#X obj 324 382 s on3;
+#X obj 161 379 s off3;
+#X msg 43 137 \$1;
+#X floatatom 116 135 5 0 0 0 - - -;
+#X floatatom 75 269 5 0 0 0 - - -;
+#X obj 75 338 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 98 338 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 121 338 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 89 283 OFF;
+#X text 258 279 ON;
+#X obj 228 334 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 251 334 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 274 334 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 228 300 select 1 2 3;
+#X obj 75 301 select 1 2 3;
+#X obj 116 232 spigot;
+#X obj 137 193 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 117 159 == 1;
+#X obj 113 100 !=;
+#X floatatom 293 88 5 0 0 0 - - -;
+#X msg 306 141 \$1;
+#X floatatom 287 204 5 0 0 0 - - -;
+#X connect 0 0 10 0;
+#X connect 0 0 26 0;
+#X connect 1 0 21 0;
+#X connect 1 0 26 1;
+#X connect 2 0 0 0;
+#X connect 3 0 1 0;
+#X connect 10 0 23 0;
+#X connect 11 0 25 0;
+#X connect 12 0 22 0;
+#X connect 13 0 5 0;
+#X connect 14 0 7 0;
+#X connect 15 0 9 0;
+#X connect 18 0 4 0;
+#X connect 19 0 6 0;
+#X connect 20 0 8 0;
+#X connect 21 0 18 0;
+#X connect 21 1 19 0;
+#X connect 21 2 20 0;
+#X connect 22 0 13 0;
+#X connect 22 1 14 0;
+#X connect 22 2 15 0;
+#X connect 23 0 12 0;
+#X connect 24 0 23 1;
+#X connect 25 0 24 0;
+#X connect 26 0 11 0;
+#X connect 27 0 28 0;
+#X connect 28 0 29 0;

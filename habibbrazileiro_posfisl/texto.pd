@@ -1,0 +1,16 @@
+#N canvas 0 26 800 493 36;
+#X obj 43 47 cnv 15 619 64 empty \$0-painel texto 33 18 1 117 -233017
+-66577 0;
+#X obj 127 346 s \$0-painel;
+#X msg 121 261 label \$1;
+#X symbolatom 164 173 10 0 0 0 - - -;
+#X floatatom 469 184 5 0 0 0 - - -;
+#X floatatom 422 327 5 0 0 0 - - -;
+#X msg 398 386 vis_size \$1 64;
+#X msg 346 257 label_pos \$1 18;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 4 0 7 0;
+#X connect 5 0 6 0;
+#X connect 6 0 1 0;
+#X connect 7 0 1 0;

@@ -1,0 +1,7 @@
+#N canvas 0 0 685 530 10;
+#X obj 125 80 loopsample;
+#X obj 125 201 ezdac~;
+#X obj 277 82 loopsample;
+#X connect 0 0 1 0;
+#X connect 0 0 1 1;
+#X connect 2 0 1 0;

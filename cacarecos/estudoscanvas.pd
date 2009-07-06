@@ -1,0 +1,58 @@
+#N canvas 0 26 800 472 16;
+#X obj 75 180 print;
+#X msg 55 68 lucio habib cerveja;
+#X msg 82 101 chocolate porres pdcpn;
+#X msg 121 132 lucio habib cerveja \, chocolate porres pdcpn;
+#X obj 85 229 cnv 15 100 60 empty \$0-tela testwe 20 12 0 77 -260818
+-262144 0;
+#X obj 314 212 r tela;
+#X floatatom 311 252 5 0 0 0 - - -;
+#X floatatom 305 302 5 0 0 0 - - -;
+#X floatatom 460 286 5 0 0 0 - tela -;
+#X msg 274 357 color \$1;
+#X msg 85 389 \; tela color \$1;
+#X floatatom 98 347 5 0 0 0 - - -;
+#X msg 406 363 label \$1;
+#X floatatom 446 325 5 0 0 0 - - -;
+#X symbolatom 414 213 10 0 0 0 - - -;
+#X floatatom 562 214 3 0 2 0 - - -;
+#X floatatom 603 248 4 0 0 0 - - -;
+#X obj 533 293 pack 0 0;
+#X text 595 210 font;
+#X text 640 247 height;
+#X obj 532 260 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 582 350 \; tela label_font \$1 \$2;
+#X msg 535 321 label_font \$1 \$2;
+#X obj 301 399 s \$0-tela;
+#X obj 677 163 f \$0;
+#X obj 678 147 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 681 194 5 0 0 0 - - -;
+#X obj 573 29 bng 15 250 50 0 bid empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 615 105;
+#X obj 617 76 prepend;
+#X floatatom 635 25 5 0 0 0 - idtela -;
+#X floatatom 520 371 5 0 0 0 - - -;
+#X msg 464 404 color \$1;
+#X obj 405 435 s 1576-tela;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 5 0 6 0;
+#X connect 7 0 9 0;
+#X connect 9 0 23 0;
+#X connect 11 0 10 0;
+#X connect 12 0 23 0;
+#X connect 14 0 12 0;
+#X connect 15 0 17 0;
+#X connect 16 0 17 1;
+#X connect 16 0 20 0;
+#X connect 17 0 22 0;
+#X connect 20 0 17 0;
+#X connect 22 0 23 0;
+#X connect 24 0 26 0;
+#X connect 25 0 24 0;
+#X connect 31 0 32 0;
+#X connect 32 0 33 0;

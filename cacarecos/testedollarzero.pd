@@ -1,0 +1,11 @@
+#N canvas 0 0 450 300 10;
+#N canvas 119 215 450 300 instancia 0;
+#X obj 111 60 r \$0-id;
+#X obj 112 84 prepend set;
+#X msg 112 107;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X restore 96 90 pd instancia;
+#X obj 250 19 loadbang;
+#X obj 250 90 s \$0-id;
+#X connect 1 0 2 0;

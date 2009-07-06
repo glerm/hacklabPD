@@ -1,0 +1,100 @@
+#N canvas 184 79 799 604 10;
+#X obj 82 364 outlet~;
+#X obj 55 22 inlet;
+#X msg 82 323 bang;
+#X obj 81 343 tabplay~ \$0-s;
+#X obj 242 428 s \$0-s;
+#X msg 241 403 normalize 1;
+#X obj 297 119 adc~ 1;
+#X obj 297 145 hip~ 5;
+#X msg 259 149 bang;
+#X obj 297 205 tabwrite~ \$0-r;
+#X obj 324 427 tab_copy \$0-r \$0-s;
+#X obj 320 402 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 225 150 stop;
+#X msg 197 350 const 0;
+#X obj 282 368 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 344 391 \$1 0 44100;
+#X msg 366 280 const 0;
+#X obj 309 297 s \$0-r;
+#X obj 347 334 inlet;
+#X msg 201 450 resize 44100;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array \$0-s 44100 float 2;
+#X coords 0 1 44100 -1 70 50 1;
+#X restore 118 129 graph;
+#X obj 178 101 bng 20 250 50 0 empty empty empty 17 7 0 10 -257985
+-159808 -1;
+#X obj 228 123 sel 0 1;
+#X obj 102 104 vsl 15 70 0 396900 0 0 empty empty empty 0 -9 0 10 -203904
+-4160 -1 100 1;
+#X obj 320 174 table \$0-r;
+#X msg 329 256 resize 441000;
+#X msg 121 0 \; pd dsp 1;
+#X obj 188 168 bng 12 250 50 0 empty empty empty 17 7 0 10 -66577 -262144
+-1;
+#X obj 329 230 loadbang;
+#N canvas 0 0 232 178 contador_10segundos 0;
+#X obj 68 47 metro;
+#X floatatom 70 88 5 0 0 0 - - -;
+#X obj 21 40 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 69 65 counter 10000;
+#X obj 70 108 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 106 34 sel 1;
+#X obj 158 82 sel 100;
+#X obj 158 59 % 150;
+#X msg 70 128 0;
+#X obj 108 136 outlet;
+#X obj 21 16 inlet;
+#X connect 0 0 3 0;
+#X connect 2 0 0 0;
+#X connect 2 0 5 0;
+#X connect 3 0 1 0;
+#X connect 3 0 7 0;
+#X connect 3 3 4 0;
+#X connect 4 0 8 0;
+#X connect 5 0 3 2;
+#X connect 6 0 9 0;
+#X connect 7 0 6 0;
+#X connect 8 0 2 0;
+#X connect 10 0 2 0;
+#X restore 184 79 pd contador_10segundos;
+#X msg 94 76 1;
+#X obj 145 103 bng 25 250 50 0 empty empty empty 17 7 0 10 -86277 -258113
+-1;
+#X obj 119 103 tgl 25 0 empty empty empty 17 7 0 10 -260097 -83269
+-1 0 1;
+#X connect 1 0 2 0;
+#X connect 1 0 21 0;
+#X connect 2 0 3 0;
+#X connect 3 0 0 0;
+#X connect 5 0 4 0;
+#X connect 6 0 7 0;
+#X connect 7 0 9 0;
+#X connect 8 0 9 0;
+#X connect 11 0 10 0;
+#X connect 12 0 9 0;
+#X connect 13 0 4 0;
+#X connect 14 0 5 0;
+#X connect 15 0 10 0;
+#X connect 15 0 14 0;
+#X connect 16 0 17 0;
+#X connect 18 0 15 0;
+#X connect 19 0 4 0;
+#X connect 22 0 12 0;
+#X connect 22 0 30 0;
+#X connect 22 1 8 0;
+#X connect 23 0 15 0;
+#X connect 25 0 17 0;
+#X connect 27 0 13 0;
+#X connect 27 0 16 0;
+#X connect 28 0 25 0;
+#X connect 29 0 31 0;
+#X connect 30 0 23 0;
+#X connect 32 0 29 0;
+#X connect 32 0 22 0;
+#X coords 0 -1 1 1 100 80 2 100 100;

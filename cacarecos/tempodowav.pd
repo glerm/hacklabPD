@@ -1,0 +1,26 @@
+#N canvas 234 61 450 485 12;
+#X obj 112 139 openpanel;
+#X obj 112 165 wavinfo;
+#X floatatom 45 228 20 0 0 3 samples - -;
+#X floatatom 195 228 5 0 0 3 channels - -;
+#X floatatom 262 229 5 0 0 3 bitrate - -;
+#X floatatom 347 229 5 0 0 3 samplerate - -;
+#X obj 112 109 bng 25 250 50 0 empty empty empty 17 7 0 10 -204786
+-1 -1;
+#X obj 218 331 /;
+#X floatatom 287 351 10 0 0 0 - - -;
+#X obj 218 383 * 1000;
+#X floatatom 218 412 10 0 0 0 - - -;
+#X text 296 327 tempo em segundos;
+#X text 256 431 tempo em milisegundos;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 3 0;
+#X connect 1 2 4 0;
+#X connect 1 3 5 0;
+#X connect 2 0 7 0;
+#X connect 5 0 7 1;
+#X connect 6 0 0 0;
+#X connect 7 0 8 0;
+#X connect 7 0 9 0;
+#X connect 9 0 10 0;
