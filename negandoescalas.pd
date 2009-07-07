@@ -1,0 +1,28 @@
+#N canvas 0 26 800 493 24;
+#X floatatom 118 70 5 0 0 0 - - -;
+#X obj 130 371 ezdac~;
+#X obj 244 15 hsl 128 15 60 72 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 12700 1;
+#X obj 130 285 unison;
+#X floatatom 193 210 5 0 0 0 - - -;
+#X obj 319 51 int;
+#X obj 316 108 change;
+#X obj 485 94 random 12;
+#X obj 484 144 + 60;
+#X obj 488 54 metro 250;
+#X obj 489 31 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 105 163 deny 61 63 64 66 68 70 71;
+#X obj 325 273 list-sect;
+#X obj 329 331 list-unique;
+#X connect 0 0 11 0;
+#X connect 2 0 5 0;
+#X connect 3 0 1 0;
+#X connect 5 0 6 0;
+#X connect 6 0 0 0;
+#X connect 7 0 8 0;
+#X connect 8 0 5 0;
+#X connect 9 0 7 0;
+#X connect 10 0 9 0;
+#X connect 11 0 3 0;
+#X connect 11 0 4 0;
