@@ -55,7 +55,7 @@
 #X connect 22 0 18 0;
 #X restore 137 174 pd timeline;
 #X obj 139 155 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 0;
+-1 -1 7;
 #X floatatom 229 256 5 0 0 0 - - -;
 #X obj 129 309 unison4;
 #X floatatom 47 255 5 0 0 0 - - -;
@@ -85,7 +85,7 @@
 #X connect 11 0 10 0;
 #X restore 12 65 pd vozes;
 #X obj 536 -59 _;
-#X msg 536 -32 C2 C3 C4 C5;
+#X msg 408 146 C3 E4 G5 C7;
 #X floatatom 300 343 5 0 0 0 - - -;
 #X floatatom 302 371 5 0 0 0 - - -;
 #X floatatom 304 397 5 0 0 0 - - -;
@@ -525,7 +525,7 @@
 #X msg 50 442 start;
 #X msg 117 442 stop;
 #X msg 630 -83 0 -3;
-#X obj 530 50 cnv 15 23 450 empty time empty 20 12 0 14 -257985 -66577
+#X obj 705 50 cnv 15 23 450 empty time empty 20 12 0 14 -257985 -66577
 0;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array \$0-baixo 8 float 2;
@@ -543,6 +543,13 @@
 #X array \$0-soprano 8 float 2;
 #X coords 0 24 8 0 200 70 1;
 #X restore 529 145 graph;
+#X msg 483 3 0 -5;
+#X msg 536 4 1 2;
+#X msg 581 5 1 -10;
+#X msg 480 32 0 7;
+#X msg 488 63 0 4;
+#X msg 681 -43 1 -8;
+#X msg 699 -83 0 -2;
 #X connect 0 0 38 0;
 #X connect 0 1 38 1;
 #X connect 1 0 5 0;
@@ -592,3 +599,10 @@
 #X connect 43 0 38 0;
 #X connect 44 0 38 0;
 #X connect 45 0 26 1;
+#X connect 51 0 26 1;
+#X connect 52 0 26 1;
+#X connect 53 0 26 1;
+#X connect 54 0 26 1;
+#X connect 55 0 26 1;
+#X connect 56 0 26 1;
+#X connect 57 0 26 1;

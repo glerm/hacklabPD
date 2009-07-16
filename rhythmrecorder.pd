@@ -3,16 +3,16 @@
 -1 -1;
 #N canvas 120 0 691 629 (subpatch) 0;
 #X array array1 100 float 3;
-#A 0 1 330.667 133.333 118.667 136 386.667 454.667 437.333 413.333
-416 393.333 229.333 449.333 113.333 329.333 478.667 406.667 420 413.333
-401.333 222.667 328 360 176 100 165.333 586.667 430.667 429.333 389.333
-261.333 358.667 113.333 220 520 86.6667 52 50.6667 50.6667 306.667
-444 420 410.667 225.333 369.333 362.667 313.333 230.667 117.333 504
-452 445.333 450.667 245.333 352 652 258.667 558.667 476 413.333 436
-220 373.333 130.667 509.333 285.333 549.333 461.333 408 472 434.667
-392 261.333 421.333 217.333 782.667 246.667 210.667 232 240 485.333
-214.667 428 233.333 460 220 193.333 216 240 432 228 685.333 709.333
-266.667 341.333 238.667 236 240 108 230.667;
+#A 0 1 230.667 345.333 244 240 244 114.667 240 230.667 225.333 369.333
+220 225.333 224 105.333 236 230.667 225.333 350.667 213.333 209.333
+221.333 121.333 236 232 221.333 344 192 224 225.333 108 236 136 113.333
+241.333 330.667 220 224 216 120 230.667 230.667 240 356 230.667 234.667
+209.333 120 234.667 232 229.333 352 225.333 230.667 208 136 234.667
+214.667 230.667 330.667 208 226.667 178.667 126.667 229.333 253.333
+106.667 150.667 101.333 261.333 254.667 244 224 116 234.667 236 120
+129.333 161.333 204 262.667 256 217.333 102.667 256 245.333 112 152
+128 242.667 256 249.333 206.667 112 245.333 265.333 490.667 480 481.333
+478.667;
 #X coords 0 5000 100 0 200 140 1;
 #X restore 291 -40 graph;
 #X obj 441 -123 tabwrite array1;
@@ -80,12 +80,12 @@
 #X obj 165 191 delay \$1;
 #X floatatom 138 70 5 0 0 0 - - -;
 #X obj 119 214 spigot;
-#X obj 229 199 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 229 199 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 119 -125 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 294 104 hsl 195 15 0 99 0 1 empty pos empty -2 -8 0 10 -262144
--1 -1 3331 1;
+-1 -1 19400 1;
 #X obj 138 -37 int;
 #X obj 229 -125 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -202,41 +202,59 @@
 #X obj 577 -190 sel 10;
 #X obj 594 -275 key;
 #X msg 371 -90 \; array1 const 0;
-#X obj 541 5 tabdump array1;
-#X obj 542 -19 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 543 108 textfile;
-#X obj 476 194 s array1;
-#X obj 541 31 prepend 0;
-#X obj 545 56 prepend add;
-#X msg 645 40 bang;
-#X msg 646 62 clear;
-#X msg 650 143 rewind;
-#X msg 643 106 print;
-#X msg 611 -102 read \$1;
-#X msg 639 -17 write \$1;
 #N canvas 0 0 450 318 leescreve 0;
+#X obj 102 102 cnv 15 120 45 empty empty empty 20 12 0 14 -203904 -66577
+0;
+#X obj 98 74 makefilename ritmo%d.txt;
+#X obj 103 116 hradio 15 1 0 8 empty empty read_file 0 -8 1 12 -159808
+-1 -1 2;
+#X symbolatom 103 132 19 0 0 0 - - -;
+#X msg 215 208 clear;
+#X msg 115 208 rewind;
+#X msg 161 208 read \$1;
+#X obj 107 154 t b b s b;
+#X obj 96 250 textfile;
+#X obj 96 271 s array1;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
+#X connect 3 0 7 0;
+#X connect 4 0 8 0;
+#X connect 5 0 8 0;
+#X connect 6 0 8 0;
+#X connect 7 0 8 0;
+#X connect 7 1 5 0;
+#X connect 7 2 6 0;
+#X connect 7 3 4 0;
+#X connect 8 0 9 0;
+#X coords 0 -1 1 1 125 50 2 100 100;
+#X restore 493 -39 pd leescreve;
+#N canvas 0 0 595 519 leescreve 0;
+#X obj 102 102 cnv 15 120 45 empty empty empty 20 12 0 14 -258113 -66577
+0;
 #X obj 161 62 makefilename ritmo%d.txt;
-#X obj 101 102 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 1;
-#X symbolatom 102 121 19 0 0 0 - - -;
-#X obj 107 148 outlet;
-#X connect 0 0 2 0;
-#X connect 1 0 0 0;
-#X connect 2 0 3 0;
-#X coords 0 -1 1 1 125 40 2 100 100;
-#X restore 608 -146 pd leescreve;
-#N canvas 0 0 450 318 leescreve 0;
-#X obj 161 62 makefilename ritmo%d.txt;
-#X obj 101 102 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 0;
-#X symbolatom 102 121 19 0 0 0 - - -;
-#X obj 107 148 outlet;
-#X connect 0 0 2 0;
-#X connect 1 0 0 0;
-#X connect 2 0 3 0;
-#X coords 0 -1 1 1 125 40 2 100 100;
-#X restore 623 -74 pd leescreve;
+#X obj 103 116 hradio 15 1 0 8 empty empty write_file 0 -8 1 12 -252673
+-188481 -45076 0;
+#X symbolatom 103 132 19 0 0 0 - - -;
+#X obj 125 236 tabdump array1;
+#X obj 134 325 textfile;
+#X obj 126 256 prepend 0;
+#X obj 126 275 prepend add;
+#X msg 34 308 write \$1;
+#X msg 234 308 clear;
+#X obj 106 208 t s b b;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
+#X connect 3 0 10 0;
+#X connect 4 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 5 0;
+#X connect 8 0 5 0;
+#X connect 9 0 5 0;
+#X connect 10 0 8 0;
+#X connect 10 1 4 0;
+#X connect 10 2 9 0;
+#X coords 0 -1 1 1 125 50 2 100 100;
+#X restore 494 15 pd leescreve;
 #X obj 61 -92 s rrr;
 #X connect 0 0 7 0;
 #X connect 0 0 5 0;
@@ -263,7 +281,7 @@
 #X connect 19 0 49 0;
 #X connect 20 0 19 1;
 #X connect 21 0 23 0;
-#X connect 21 0 92 0;
+#X connect 21 0 80 0;
 #X connect 22 0 47 0;
 #X connect 22 0 53 0;
 #X connect 23 0 14 0;
@@ -298,17 +316,3 @@
 #X connect 75 0 0 0;
 #X connect 76 0 74 0;
 #X connect 76 0 75 0;
-#X connect 78 0 82 0;
-#X connect 79 0 78 0;
-#X connect 80 0 81 0;
-#X connect 80 1 86 0;
-#X connect 82 0 83 0;
-#X connect 83 0 80 0;
-#X connect 84 0 80 0;
-#X connect 85 0 80 0;
-#X connect 86 0 80 0;
-#X connect 87 0 80 0;
-#X connect 88 0 80 0;
-#X connect 89 0 80 0;
-#X connect 90 0 88 0;
-#X connect 91 0 89 0;
