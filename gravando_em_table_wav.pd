@@ -44,7 +44,7 @@
 #X obj 102 102 cnv 15 120 45 empty empty empty 20 12 0 14 -258113 -66577
 0;
 #X obj 103 116 hradio 15 1 0 8 empty empty write_file 0 -8 1 12 -252673
--188481 -261234 7;
+-188481 -261234 0;
 #X symbolatom 103 132 19 0 0 0 - - -;
 #X obj 134 325 textfile;
 #X obj 126 256 prepend 0;
@@ -74,8 +74,6 @@
 #X msg 94 -229 cosinesum 0 -0.2 -0.2 0.2 -0.2 0.2 -0.2 0.2;
 #X msg 95 -249 normalize 1;
 #X obj 316 -469 soundfiler;
-#X msg 316 -492 read -resize /home/glerm/samples/y1.wav NOME_da_TABELA
-;
 #X msg 315 -438 \; NOME_da_TABELA normalize 1;
 #X floatatom 220 -317 10 0 0 0 - - -;
 #X msg 139 -199 0 0.5 1 0.3 -0.5 -1;
@@ -99,42 +97,48 @@
 #X obj 591 -178 tabplay~ NOME_da_TABELA;
 #X obj 435 -296 spigot~;
 #X obj 496 -308 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X obj 594 -204 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 608 -248 * 0.1;
 #X floatatom 613 -228 5 0 0 0 - - -;
 #X msg 466 -267 48000;
 #X obj 580 -271 / 48000;
-#X connect 1 0 12 0;
+#X msg 315 -506 read -resize /home/glerm/samples/y1.wav NOME_da_TABELA
+;
+#X msg 627 -292 48000;
+#X msg 632 -272 44100;
+#X connect 1 0 11 0;
 #X connect 5 0 4 0;
 #X connect 7 0 6 0;
 #X connect 8 0 6 0;
-#X connect 10 0 9 0;
-#X connect 12 0 29 0;
+#X connect 11 0 28 0;
+#X connect 12 0 6 0;
 #X connect 13 0 6 0;
 #X connect 14 0 6 0;
-#X connect 15 0 6 0;
-#X connect 17 0 32 0;
+#X connect 16 0 31 0;
+#X connect 18 0 16 0;
 #X connect 19 0 17 0;
-#X connect 20 0 18 0;
-#X connect 20 0 18 1;
-#X connect 21 0 20 0;
-#X connect 22 0 23 0;
-#X connect 22 1 24 0;
-#X connect 22 2 25 0;
-#X connect 22 3 26 0;
-#X connect 27 0 28 0;
-#X connect 28 0 22 0;
-#X connect 29 0 16 0;
-#X connect 30 0 21 1;
-#X connect 30 0 38 0;
-#X connect 31 0 18 0;
-#X connect 31 0 18 1;
-#X connect 32 0 21 0;
-#X connect 33 0 32 1;
-#X connect 34 0 31 0;
-#X connect 35 0 36 0;
-#X connect 35 0 19 0;
-#X connect 37 0 21 1;
-#X connect 38 0 35 0;
+#X connect 19 0 17 1;
+#X connect 20 0 19 0;
+#X connect 21 0 22 0;
+#X connect 21 1 23 0;
+#X connect 21 2 24 0;
+#X connect 21 3 25 0;
+#X connect 26 0 27 0;
+#X connect 27 0 21 0;
+#X connect 28 0 15 0;
+#X connect 29 0 20 1;
+#X connect 29 0 37 0;
+#X connect 30 0 17 0;
+#X connect 30 0 17 1;
+#X connect 31 0 20 0;
+#X connect 32 0 31 1;
+#X connect 33 0 30 0;
+#X connect 34 0 35 0;
+#X connect 34 0 18 0;
+#X connect 36 0 20 1;
+#X connect 37 0 34 0;
+#X connect 38 0 9 0;
+#X connect 39 0 37 1;
+#X connect 40 0 37 1;

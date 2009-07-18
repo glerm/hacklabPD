@@ -55,7 +55,7 @@
 #X connect 22 0 18 0;
 #X restore 137 174 pd timeline;
 #X obj 139 155 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 7;
+-1 -1 2;
 #X floatatom 229 256 5 0 0 0 - - -;
 #X obj 129 309 unison4;
 #X floatatom 47 255 5 0 0 0 - - -;
@@ -85,7 +85,7 @@
 #X connect 11 0 10 0;
 #X restore 12 65 pd vozes;
 #X obj 536 -59 _;
-#X msg 408 146 C3 E4 G5 C7;
+#X msg 408 146 E2 G3 B4 D6;
 #X floatatom 300 343 5 0 0 0 - - -;
 #X floatatom 302 371 5 0 0 0 - - -;
 #X floatatom 304 397 5 0 0 0 - - -;
@@ -487,7 +487,7 @@
 #X connect 87 0 78 0;
 #X coords 0 -1 1 1 450 120 2 100 100;
 #X restore 13 -55 pd intervalos;
-#X obj 61 121 tgl 50 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 61 121 tgl 50 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X floatatom 127 99 3 0 0 0 - - -;
 #X msg 372 -91 0 0;
@@ -515,7 +515,7 @@
 #X connect 7 0 1 0;
 #X restore 60 172 pd toca;
 #X obj 61 105 hradio 15 1 0 3 xxxx ssss empty 0 -8 0 10 -262144 -1
--1 0;
+-1 2;
 #X msg 250 -87 1 8;
 #X obj 131 491 oggwrite~;
 #X msg 234 454 open teste.ogg;
@@ -525,7 +525,7 @@
 #X msg 50 442 start;
 #X msg 117 442 stop;
 #X msg 630 -83 0 -3;
-#X obj 705 50 cnv 15 23 450 empty time empty 20 12 0 14 -257985 -66577
+#X obj 580 50 cnv 15 23 450 empty time empty 20 12 0 14 -257985 -66577
 0;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array \$0-baixo 8 float 2;
@@ -550,6 +550,7 @@
 #X msg 488 63 0 4;
 #X msg 681 -43 1 -8;
 #X msg 699 -83 0 -2;
+#X msg 487 -28 0 4;
 #X connect 0 0 38 0;
 #X connect 0 1 38 1;
 #X connect 1 0 5 0;
@@ -606,3 +607,4 @@
 #X connect 55 0 26 1;
 #X connect 56 0 26 1;
 #X connect 57 0 26 1;
+#X connect 58 0 26 1;

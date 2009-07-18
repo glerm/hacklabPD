@@ -1,9 +1,9 @@
-#N canvas 237 72 758 482 12;
+#N canvas 189 63 758 482 12;
 #X text 465 442 updated for Pd version 0.26;
 #X obj 345 144 r receive1;
 #X obj 152 412 qlist;
 #X floatatom 339 195 0 0 0 0 - - -;
-#X obj 50 356 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 30 362 bng 50 250 50 0 empty empty play 0 -10 0 10 -203904 -13381
 -1;
 #X msg 77 155 clear;
 #X msg 132 175 print;
@@ -36,14 +36,14 @@
 #X obj 292 348 t f f;
 #X text 322 369 delta;
 #X obj 284 22 hsl 200 30 0 1 0 0 empty empty empty -2 -8 0 10 -4034
--204800 -1 16000 1;
+-204800 -1 15900 1;
 #X obj 232 282 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
 -1 -1 0;
 #X msg 202 326 tempo 0.5;
 #X msg 204 350 tempo 1;
 #X msg 206 376 tempo 2;
 #X obj 445 141 hsl 200 30 0 1 0 0 empty empty empty -2 -8 0 10 -4034
--204800 -1 16000 1;
+-204800 -1 15900 1;
 #X connect 1 0 3 0;
 #X connect 1 0 10 0;
 #X connect 1 0 37 0;
