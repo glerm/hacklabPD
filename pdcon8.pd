@@ -1,0 +1,23 @@
+#N canvas 0 0 860 553 10;
+#X obj 236 24 cnv 15 15 179 empty timeline empty 20 12 0 14 -142080
+-1 0;
+#X obj 304 481 s timeline;
+#X msg 478 247 coloe;
+#X msg 643 352 pos 0 0;
+#X msg 151 398 vis_size 15 \$1;
+#X floatatom 120 328 5 0 0 0 - - -;
+#X floatatom 349 357 5 0 0 0 - - -;
+#X msg 318 395 pos \$1 24;
+#X obj 444 375 metro 100;
+#X obj 447 409 count 500;
+#X obj 472 328 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 528 364 5 0 0 0 - - -;
+#X connect 4 0 1 0;
+#X connect 5 0 4 0;
+#X connect 6 0 7 0;
+#X connect 7 0 1 0;
+#X connect 8 0 9 0;
+#X connect 9 0 6 0;
+#X connect 10 0 8 0;
+#X connect 11 0 8 1;

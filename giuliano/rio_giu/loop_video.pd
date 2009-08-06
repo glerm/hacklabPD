@@ -1,0 +1,233 @@
+#N canvas 594 126 680 590 10;
+#N canvas 375 311 710 605 loop 0;
+#X obj 102 102 cnv 15 175 95 empty empty empty 20 12 0 14 -159808 -66577
+0;
+#X obj 152 393 pdp_loop 25;
+#X msg 302 109 record;
+#X floatatom 274 363 5 0 0 0 - - -;
+#X floatatom 274 338 5 0 0 0 - - -;
+#X msg 302 82 store \$1;
+#X floatatom 304 63 5 0 0 0 - - -;
+#X msg 301 158 stop;
+#X text 365 325 set playback position;
+#X text 372 345 hot;
+#X text 369 362 cold;
+#X text 392 159 stop recording;
+#X text 393 107 start recording at position 0;
+#X text 392 82 store a single packet at an arbitrary position;
+#X text 272 393 creation arg: loop size;
+#X msg 302 132 record 10 2;
+#X text 392 133 start recording at position 10 \, recording 2 packets
+;
+#X msg 274 209 loop \$1;
+#X obj 249 114 tgl 15 0 tyui tuyiiu loop 0 -6 0 8 -262144 -1 -1 0 1
+;
+#X text 365 210 looping on/off;
+#X msg 274 310 0;
+#X msg 274 273 size \$1;
+#X floatatom 274 249 5 0 0 0 - - -;
+#X text 366 270 set a new loop size. (don't make this too large);
+#X msg 561 356 collectgarbage;
+#X obj 561 387 pdp_control;
+#X msg 546 329 thread 1;
+#X obj 32 551 pdp_glx;
+#X msg 38 366 create;
+#X msg 75 345 destroy;
+#X obj 48 316 sel 1;
+#X obj 65 33 inlet;
+#X obj 149 104 bng 15 250 50 0 cxzsdrfgv ktygf empty 17 7 0 10 -258113
+-1 -1;
+#X obj 228 176 nbx 3 20 -1e+37 1e+37 0 0 iutgbvct jhgdurfcvb fim -2
+-8 0 10 -262144 -1 -1 0 256;
+#X obj 116 488 outlet;
+#X obj 159 175 nbx 3 20 -1e+37 1e+37 0 0 oiuto96ri o6ffotgc tamanho
+-2 -8 0 12 -262144 -1 -1 0 256;
+#X obj 102 177 nbx 3 20 -1e+37 1e+37 0 0 uyfijhcgfu uytdhbvcyut início
+-2 -8 0 10 -262144 -1 -1 0 256;
+#X obj 193 51 del 500;
+#X obj 47 270 tgl 30 0 empty aiiiiiiiiiiiii > 0 15 0 50 -260097 -262144
+-262144 1 1;
+#X obj 32 198 pdp_spigot;
+#X obj 105 114 tgl 15 0 empty empty on 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 38 242 loadbang;
+#X obj 330 496 pdp_route 3;
+#X obj 410 457 hradio 15 1 0 3 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X msg 71 439 display :0;
+#X connect 1 0 27 0;
+#X connect 2 0 1 0;
+#X connect 3 0 1 1;
+#X connect 4 0 1 0;
+#X connect 5 0 1 0;
+#X connect 6 0 5 0;
+#X connect 7 0 1 0;
+#X connect 15 0 1 0;
+#X connect 17 0 1 0;
+#X connect 18 0 17 0;
+#X connect 20 0 4 0;
+#X connect 21 0 1 0;
+#X connect 22 0 21 0;
+#X connect 24 0 25 0;
+#X connect 26 0 25 0;
+#X connect 28 0 27 0;
+#X connect 29 0 27 0;
+#X connect 30 0 28 0;
+#X connect 30 1 29 0;
+#X connect 31 0 39 0;
+#X connect 32 0 2 0;
+#X connect 33 0 3 0;
+#X connect 35 0 22 0;
+#X connect 36 0 4 0;
+#X connect 37 0 7 0;
+#X connect 39 0 27 0;
+#X connect 39 1 1 0;
+#X connect 40 0 39 1;
+#X connect 41 0 28 0;
+#X connect 43 0 42 1;
+#X connect 44 0 27 0;
+#X coords 0 -1 1 1 180 100 1 100 100;
+#X restore 153 64 pd loop pdp;
+#N canvas 350 25 872 692 qt 1;
+#X obj 102 102 cnv 15 175 55 empty empty player 60 8 0 14 -203904 -66577
+0;
+#X obj -17 470 pdp_qt;
+#X floatatom 22 541 5 0 0 0 - - -;
+#X floatatom 53 496 5 0 0 0 - - -;
+#X obj -20 170 openpanel;
+#X msg -54 290 open \$1;
+#X msg -20 151 bang;
+#X msg 140 376 close;
+#X floatatom 140 404 5 0 0 0 - - -;
+#X floatatom 176 404 5 0 0 0 - - -;
+#X msg -107 401 loop \$1;
+#X obj -107 382 tgl 15 0 empty empty loop 0 -6 0 8 -262144 -1 -1 0
+1;
+#X msg -78 350 dump array 0;
+#X msg 108 262 stop;
+#X msg -107 422 autoplay 1;
+#X msg 72 261 play;
+#X msg -79 328 cont;
+#X msg -20 129 carregar;
+#X msg -183 192 /home/giu/Desktop/giu_MIS/cinzaverde.mov;
+#X obj 253 113 tgl 15 0 htrdtdddddd drrrrrrrrrrrrtt loop -1 -6 0 8
+-262144 -1 -1 1 1;
+#X obj 115 114 bng 15 250 50 0 empty empty carregar -12 -7 0 10 -262144
+-1 -1;
+#X obj 175 119 tgl 20 0 aiiiiiiiiiiiii uyiy > 2 9 0 30 -260097 -261682
+-262144 1 1;
+#X obj 76 189 tgl 30 0 empty aiiiiiiiiiiiii > 0 15 0 50 -260097 -262144
+-262144 1 1;
+#X obj 73 243 sel 1;
+#X obj -60 537 outlet;
+#X obj 102 143 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262130 -1 -1 361 256;
+#X obj 230 142 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262130 -1 -1 3183 256;
+#X obj -53 255 symbol;
+#X obj -53 219 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -183 91 loadbang;
+#X obj 215 175 sel;
+#X msg 215 195 1;
+#X obj 216 216 spigot;
+#X symbolatom 508 151 10 0 0 0 - - -;
+#X obj 7 233 r memo;
+#X obj 406 111 key;
+#X floatatom 406 140 5 0 0 0 - - -;
+#X obj 399 238 sel 49 50 51 112;
+#X obj 469 111 keyname;
+#X floatatom 469 152 5 0 0 0 - - -;
+#X obj 372 370 s memo;
+#X msg 399 290 symbol /home/giu/Desktop/giu_MIS/cinzaverde.mov;
+#X msg 399 309 symbol /home/giu/Desktop/giu_MIS/trilho-esquerda-filtro.mov
+;
+#X msg 398 331 symbol /home/giu/Desktop/giu_MIS/trilho-frontal-filtro.mov
+;
+#X obj 329 283 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 72 224 pipe 5;
+#X connect 1 0 24 0;
+#X connect 1 1 2 0;
+#X connect 1 2 3 0;
+#X connect 2 0 25 0;
+#X connect 3 0 26 0;
+#X connect 4 0 27 1;
+#X connect 5 0 1 0;
+#X connect 6 0 4 0;
+#X connect 7 0 1 0;
+#X connect 8 0 1 0;
+#X connect 9 0 1 1;
+#X connect 10 0 1 0;
+#X connect 11 0 10 0;
+#X connect 12 0 1 0;
+#X connect 13 0 1 0;
+#X connect 14 0 1 0;
+#X connect 15 0 1 0;
+#X connect 16 0 1 0;
+#X connect 17 0 6 0;
+#X connect 18 0 27 1;
+#X connect 19 0 32 1;
+#X connect 20 0 17 0;
+#X connect 22 0 28 0;
+#X connect 22 0 45 0;
+#X connect 23 0 15 0;
+#X connect 23 1 13 0;
+#X connect 25 0 30 0;
+#X connect 26 0 30 1;
+#X connect 27 0 5 0;
+#X connect 28 0 27 0;
+#X connect 29 0 18 0;
+#X connect 30 0 31 0;
+#X connect 31 0 32 0;
+#X connect 31 0 19 0;
+#X connect 32 0 21 0;
+#X connect 34 0 27 1;
+#X connect 35 0 36 0;
+#X connect 36 0 37 0;
+#X connect 37 0 41 0;
+#X connect 37 1 42 0;
+#X connect 37 2 43 0;
+#X connect 37 3 44 0;
+#X connect 38 0 39 0;
+#X connect 38 1 33 0;
+#X connect 41 0 40 0;
+#X connect 42 0 40 0;
+#X connect 43 0 40 0;
+#X connect 44 0 31 0;
+#X connect 45 0 23 0;
+#X coords 0 -1 1 1 180 60 1 100 100;
+#X restore 153 -45 pd qt;
+#X obj 60 202 pdp_qt;
+#N canvas 151 323 450 300 blur 0;
+#X obj 102 102 cnv 15 175 35 empty empty blur 80 8 0 14 -232576 -66577
+0;
+#X obj 379 181 pdp_blur;
+#X floatatom 236 119 5 0 0 0 - - -;
+#X obj 131 119 hsl 100 15 0 1 0 0 empty empty blur 40 8 0 10 -128992
+-262144 -262144 0 1;
+#X obj 315 38 inlet;
+#X obj 317 199 outlet;
+#X obj 348 78 pdp_spigot;
+#X obj 108 118 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 238 195 sel 0;
+#X msg 205 238 0;
+#X msg 265 244 1;
+#X connect 1 0 5 0;
+#X connect 2 0 1 1;
+#X connect 2 0 8 0;
+#X connect 3 0 1 1;
+#X connect 3 0 2 0;
+#X connect 4 0 6 0;
+#X connect 4 0 5 0;
+#X connect 6 1 1 0;
+#X connect 7 0 6 1;
+#X connect 8 0 9 0;
+#X connect 8 1 10 0;
+#X connect 9 0 7 0;
+#X connect 10 0 7 0;
+#X coords 0 -1 1 1 180 40 1 100 100;
+#X restore 153 18 pd blur;
+#X connect 1 0 3 0;
+#X connect 3 0 0 0;

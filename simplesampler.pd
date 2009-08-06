@@ -1,0 +1,42 @@
+#N canvas 0 26 1003 661 24;
+#X obj 62 -43 openpanel;
+#X obj 192 -105 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 311 -51 f \$0;
+#X obj 108 25 pack s s;
+#X obj 188 -87 t b b;
+#X msg 231 376 \; \$1 normalize 1;
+#X obj 65 152 soundfiler;
+#X obj 230 312 symbol;
+#X obj 70 193 bang;
+#X msg 40 73 read -resize \$1 \$2;
+#X obj 189 -146 inlet;
+#X obj 554 -135 table \$0-sample;
+#X obj 311 -8 makefilename %d-sample;
+#X obj 513 129 tabplay~ \$0-sample;
+#X obj 514 173 outlet~;
+#X obj 526 107 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 513 68 inlet;
+#X obj 704 -13 f \$0;
+#X floatatom 720 31 5 0 0 0 - - -;
+#X obj 704 -42 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 0 0 3 0;
+#X connect 1 0 4 0;
+#X connect 2 0 12 0;
+#X connect 3 0 9 0;
+#X connect 4 0 0 0;
+#X connect 4 1 2 0;
+#X connect 6 0 8 0;
+#X connect 7 0 5 0;
+#X connect 8 0 7 0;
+#X connect 9 0 6 0;
+#X connect 10 0 1 0;
+#X connect 12 0 3 1;
+#X connect 12 0 7 1;
+#X connect 13 0 14 0;
+#X connect 15 0 13 0;
+#X connect 16 0 15 0;
+#X connect 17 0 18 0;
+#X connect 19 0 17 0;

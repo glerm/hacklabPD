@@ -1,0 +1,9 @@
+#N canvas 925 194 486 585 10;
+#X obj 46 24 inlet;
+#X obj 61 494 outlet;
+#X obj 46 162 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 45 134 randel 19000;
+#X obj 47 69 t b b b b;
+#X connect 0 0 4 0;
+#X connect 3 0 2 0;

@@ -1,0 +1,28 @@
+#N canvas 433 322 508 447 10;
+#X obj 29 246 random;
+#X obj 39 50 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 40 28 loadbang;
+#X msg 60 49 1;
+#X obj 40 96 f;
+#X obj 69 96 + 1;
+#X floatatom 52 120 5 0 0 0 - - -;
+#X obj 39 70 metro 1000;
+#X obj 241 96 * 60;
+#X floatatom 245 128 5 0 0 0 - - -;
+#X text 101 119 timeline;
+#X msg 239 64 3.6;
+#X obj 98 96 % 216;
+#X obj 41 138 sel 1 20 40 60 100 210;
+#X obj 53 325 outlet;
+#X connect 1 0 7 0;
+#X connect 2 0 3 0;
+#X connect 3 0 7 0;
+#X connect 4 0 5 0;
+#X connect 4 0 6 0;
+#X connect 4 0 13 0;
+#X connect 5 0 12 0;
+#X connect 7 0 4 0;
+#X connect 8 0 9 0;
+#X connect 11 0 8 0;
+#X connect 12 0 4 1;
