@@ -1,9 +1,0 @@
-#N canvas 519 79 743 635 10;
-#N canvas 0 22 450 300 ramdomness 0;
-#X obj 67 39 inlet;
-#X obj 69 155 outlet;
-#X restore 37 88 pd ramdomness;
-#N canvas 0 22 450 300 sample 0;
-#X obj 67 39 inlet;
-#X obj 69 155 outlet;
-#X restore 36 152 pd sample;
