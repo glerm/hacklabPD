@@ -1,5 +1,5 @@
 #N canvas 0 0 714 452 36;
-#X obj 134 272 simplesampler;
+#X obj 135 272 simplesampler;
 #X text 124 56 aqui vou documentar;
 #X text 66 223 abre o wav;
 #X text 409 217 toca;
